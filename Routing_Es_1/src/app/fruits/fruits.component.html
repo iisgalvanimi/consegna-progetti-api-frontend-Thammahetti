@@ -1,1 +1,6 @@
-<p>fruits works!</p>
+<div *ngFor="let element of fruits">
+    <div class="d-flex flex-row align-items-center border p-2 mb-2">
+      <p class="mx-auto">Nome: <strong>{{element.name}}</strong></p>
+      <p  class="mx-auto">Image: <i>{{element.emoji}}</i></p>
+    </div>
+  </div>
