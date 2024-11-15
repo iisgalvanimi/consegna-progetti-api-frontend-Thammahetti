@@ -11,7 +11,7 @@ import { FooComponent } from './foo/foo.component';
     FooComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule  
+    BrowserModule, HttpClientModule ,AppRoutingModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
