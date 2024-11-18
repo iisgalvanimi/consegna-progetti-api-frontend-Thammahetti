@@ -1,6 +1,7 @@
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Foo} from './foo.model';
+import { Foo } from './foo.model';
 
 @Component({
   selector: 'app-foo-component',
@@ -8,24 +9,26 @@ import {Foo} from './foo.model';
   styleUrls: ['./foo-component.component.css']
 })
 export class FooComponentComponent implements OnInit {
-  fooData : Foo[];
-  data: Object;
-  loading: boolean;
-  o: Observable<Object>;
-  oFoo : Observable<Foo[]>;
+
   constructor(public http: HttpClient) { }
 
+  fooData! : Foo[];
+  data!: Object;
+  loading!: boolean;
+  o!: Observable<Object>;
+  oFoo! : Observable<Foo[]>;
   makeRequest(): void {
     
     this.loading = true;
     this.o = this.http.get('https://jsonplaceholder.typicode.com/posts/1');
     this.o.subscribe(this.getData);
   }
-
   getData = (d: Object) => {
     this.data = d;
     this.loading = false;
   }
+
+  
 
   //Nota bene, questo è un metodo alternativo al metodo makeRequest
   makeCompactRequest(): void {
@@ -67,4 +70,3 @@ export class FooComponentComponent implements OnInit {
   }
 
 }
-
