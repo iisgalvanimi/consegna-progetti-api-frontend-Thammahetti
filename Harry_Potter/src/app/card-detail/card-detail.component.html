@@ -1,0 +1,13 @@
+<div *ngIf="character">
+    <h2>{{ character.nickname }}</h2>
+    <img [src]="character.image" alt="{{ character.nickname }}" class="img-fluid">
+    <p><strong>Casata:</strong> {{ character.hogwartsHouse }}</p>
+    <p><strong>Descrizione:</strong> {{ character.description }}</p>
+    <!-- Aggiungi altre informazioni disponibili -->
+  </div>
+  
+  <!-- Se il personaggio non è trovato, mostra un messaggio -->
+  <div *ngIf="!character">
+    <p>Personaggio non trovato.</p>
+  </div>
+  

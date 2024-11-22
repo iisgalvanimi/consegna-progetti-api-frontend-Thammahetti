@@ -1,0 +1,25 @@
+/* Centra il bottone nella card */
+.custom-btn {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    border: 2px solid transparent; /* bordo iniziale trasparente */
+  }
+  
+  .custom-btn:hover {
+    background-color: white;  /* Cambia il colore di sfondo a bianco */
+    color: #007bff;  /* Colore del testo (blu) */
+    border-color: #007bff; /* Colore del bordo (blu) */
+    transform: scale(1.1); /* Aumenta leggermente la dimensione del bottone */
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  

@@ -4,12 +4,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CardDetailComponent } from './card-detail/card-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BooksComponent
+    BooksComponent,
+    CardDetailComponent
   ],
   imports: [
     BrowserModule,
