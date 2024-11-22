@@ -1,0 +1,27 @@
+/* Navbar brand glow effect */
+.text-glow {
+    color: #f8f9fa;
+    text-shadow: 0 0 5px #ffdd59, 0 0 10px #ffdd59, 0 0 20px #ffdd59, 0 0 40px #ffdd59;
+    transition: text-shadow 0.3s ease-in-out;
+  }
+  
+  .text-glow:hover {
+    text-shadow: 0 0 10px #ffdd59, 0 0 20px #ff5733, 0 0 40px #ff5733, 0 0 80px #ff5733;
+  }
+  
+  /* Navbar animation */
+  .navbar {
+    animation: fadeIn 2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

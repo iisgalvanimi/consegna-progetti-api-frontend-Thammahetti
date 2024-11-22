@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Harry_Potter": {
+    "PotterApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/harry-potter",
+            "outputPath": "dist/potter-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,7 +25,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -60,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Harry_Potter:build:production"
+              "browserTarget": "PotterApp:build:production"
             },
             "development": {
-              "browserTarget": "Harry_Potter:build:development"
+              "browserTarget": "PotterApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Harry_Potter:build"
+            "browserTarget": "PotterApp:build"
           }
         },
         "test": {
@@ -87,7 +88,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+             "src/styles.css",
+             "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           }
@@ -96,6 +98,6 @@
     }
   },
   "cli": {
-    "analytics": "08edb6c4-be79-4572-8911-5ff5b2356095"
+    "analytics": "fb1604ee-0a41-4417-b11e-9d11c5039d03"
   }
 }

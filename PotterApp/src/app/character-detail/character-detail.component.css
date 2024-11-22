@@ -1,0 +1,163 @@
+/* Contenitore principale */
+.container {
+    margin-top: 50px;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  /* Definire l'animazione per il fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Card Styling - sezione di dettaglio */
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  /* Colonna immagine */
+  .col-md-4 {
+    position: relative;
+    text-align: center;
+    animation: scaleIn 1s ease-in-out;
+  }
+  
+  /* Colonna testo */
+  .col-md-8 {
+    animation: slideInFromRight 1s ease-out;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #f8f9fa; /* Sfondo chiaro per il contenuto */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Effetto immagine */
+  img {
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Animazione per l'immagine */
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Animazione per il testo */
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Titolo del personaggio */
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #212529; /* Colore scuro per contrasto */
+    text-align: center;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  h2:hover {
+    color: #ffab00; /* Colore arancione per hover */
+  }
+  
+  /* Testo del personaggio - Modifica per il colore nero */
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #212529; /* Colore nero per miglior contrasto */
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Bottoni per navigare tra i personaggi */
+  button {
+    font-size: 1rem;
+    background-color: #ffab00;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #e68900;
+  }
+  
+  /* Pulsante per tornare alla homepage */
+  a.btn-secondary {
+    background-color: #007bff;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  a.btn-secondary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Template di caricamento */
+  ng-template {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #212529; /* Colore nero per il testo di caricamento */
+  }
+  
+  /* Styling per i pulsanti di navigazione personaggi */
+  button.btn-outline-primary {
+    background-color: transparent;
+    color: #ffab00;
+    border: 2px solid #ffab00;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  button.btn-outline-primary:hover {
+    background-color: #ffab00;
+    color: #212529;
+  }
+  
+  /* Animazione generale per l'ingresso */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

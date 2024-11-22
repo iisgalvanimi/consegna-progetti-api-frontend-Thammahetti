@@ -1,0 +1,33 @@
+<div class="container mt-5" *ngIf="character; else loadingTemplate">
+    <div class="row">
+      <div class="col-md-4">
+        <img [src]="character.image" alt="{{ character.fullName }}" class="img-fluid rounded">
+      </div>
+      <div class="col-md-8">
+        <h2>{{ character.fullName }}</h2>
+        <p><strong>Soprannome:</strong> {{ character.nickname }}</p>
+        <p><strong>Casa di Hogwarts:</strong> {{ character.hogwartsHouse }}</p>
+        <p><strong>Interpreto da:</strong> {{ character.interpretedBy }}</p>
+        <p><strong>Data di nascita:</strong> {{ character.birthdate }}</p>
+        <p><strong>Figli:</strong> {{ character.children.length > 0 ? character.children.join(', ') : 'Nessuno' }}</p>
+  
+        <!-- Pulsanti per navigare tra i personaggi -->
+        <div class="mt-3">
+          <h3>Vai al personaggio:</h3>
+          <button *ngFor="let otherCharacter of allCharacters" 
+                  [routerLink]="['/character', otherCharacter.index]" 
+                  class="btn btn-outline-primary me-2">
+            {{ otherCharacter.nickname }}
+          </button>
+        </div>
+  
+        <a routerLink="/" class="btn btn-secondary mt-3">Torna alla Homepage</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Template alternativo per il caricamento -->
+  <ng-template #loadingTemplate>
+    <p>Caricamento in corso...</p>
+  </ng-template>
+  

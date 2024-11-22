@@ -1,0 +1,58 @@
+/* Container centrale */
+.container {
+    animation: slideIn 1.5s ease-out;
+    padding-top: 50px; /* Distanza dal top */
+  }
+  
+  /* Imposta il layout a flex per disporre le card in fila */
+  .row {
+    display: flex;
+    justify-content: center; /* Centra le card orizzontalmente */
+    gap: 30px; /* Maggiore spazio tra le card */
+    flex-wrap: wrap; /* Permette la rottura della riga per schermi più piccoli */
+  }
+  
+  /* Card styling con bordo e dimensioni aggiornate */
+  .character-card {
+    background: linear-gradient(135deg, #212529, #343a40);
+    color: #f8f9fa;
+    border: 3px solid #f8f9fa; /* Bordo visibile con colore chiaro */
+    border-radius: 20px;
+    width: 250px; /* Maggiore larghezza per la card */
+    height: 450px; /* Maggiore altezza per la card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiungi transizione per effetto hover */
+    margin-bottom: 30px; /* Distanza dal fondo per ogni card */
+    display: flex;
+    flex-direction: column; /* Disporre gli elementi della card in colonna */
+    align-items: center; /* Centra tutti gli elementi all'interno della card */
+    justify-content: space-between; /* Spazio tra gli elementi nella card */
+    padding: 10px; /* Aggiungi padding per evitare che il contenuto tocchi i bordi */
+  }
+  
+  /* Effetto hover con ombra e trasformazione */
+  .character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  
+  /* Immagine centrata e visibile correttamente */
+  .card-img-top {
+    width: 100%; /* L'immagine occupa tutta la larghezza della card */
+    height: 200px; /* Imposta un'altezza fissa per l'immagine */
+    object-fit: cover; /* L'immagine si adatta senza distorsioni */
+    border-radius: 15px; /* Angoli arrotondati per l'immagine */
+    object-position: center; /* Centra l'immagine */
+  }
+  
+  /* Animazione per l'ingresso */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
